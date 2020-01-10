@@ -12,7 +12,21 @@
 DROP TABLE Projects;
 DROP TABLE Employees;
 DROP TABLE Hours;
+-- This drops the tables, just testing
 */
+/*
+USE master
+IF EXISTS(
+          SELECT Name
+          FROM Sysdatabases
+          WHERE Name = 'Assignment01DB_JustinTran')
+BEGIN
+DROP DATABASE Assignment01DB_JustinTran;
+END
+-- Talked about in class, this makes a new database everytime, no errors when running
+*/
+
+--CREATE DATABASE Assignment01DB_JustinTran; -- Makes database, run once
 
 CREATE TABLE dbo.Projects(
     ProjectID int Primary Key,
@@ -24,7 +38,7 @@ INSERT INTO Projects (ProjectID, ProjectName, ProjectDescription)
     (2, 'Accounting Application Upgrade', 'Modify our existing Accounting Application to connect...');
 
 CREATE TABLE dbo.Employees(
-	EmployeeID int NULL,
+	EmployeeID int Primary Key,
     ProjectID int,
 	FirstName varchar(20) NULL,
 	LastName varchar(20) NULL
@@ -38,7 +52,6 @@ CREATE TABLE dbo.Hours(
 	DateWorked varchar(50) NULL,
 	HoursWorked decimal(10, 2) NULL
 );
-
 INSERT INTO Hours (HourID, EmployeeID, DateWorked, HoursWorked)
  VALUES (1, 1, '2017-01-01 00:00:00.000', 6.00), (2, 1, '2017-01-02 00:00:00.000', 4.00),
     (3, 2, '2017-01-01 00:00:00.000', 5.50), (4, 2, '2017-01-02 00:00:00.000', 6.00);
