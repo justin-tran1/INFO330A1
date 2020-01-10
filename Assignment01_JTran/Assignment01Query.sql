@@ -39,7 +39,7 @@ INSERT INTO Projects (ProjectID, ProjectName, ProjectDescription)
 
 CREATE TABLE dbo.Employees(
 	EmployeeID int Primary Key,
-    ProjectID int,
+  ProjectID int,
 	FirstName varchar(20) NULL,
 	LastName varchar(20) NULL
 );
@@ -48,7 +48,7 @@ INSERT INTO Employees (EmployeeID, ProjectID, FirstName, LastName)
 
 CREATE TABLE dbo.Hours(
 	HourID int Primary Key,
-    EmployeeID int,
+  EmployeeID int,
 	DateWorked varchar(50) NULL,
 	HoursWorked decimal(10, 2) NULL
 );
