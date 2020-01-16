@@ -2,9 +2,9 @@
 --*************************************************************************--
 -- Title: INFO 330 Database Systems and Design
 -- Author: Justin Tran
--- Desc: Writing an SQL script to create a database
+-- Desc: Creating a database with constraints and normalization
 -- Change Log: When,Who,What
--- 2020-01-08, Justin Tran, Created File
+-- 2020-01-16, Justin Tran, Created File
 --**************************************************************************--
 */
 
