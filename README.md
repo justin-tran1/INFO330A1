@@ -1,2 +1,2 @@
-# INFO330A1
-Assignment 1
+# INFO330A2
+Assignment 2
